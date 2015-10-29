@@ -114,7 +114,7 @@ function LevelMetrics(db, opts) {
     namespace: 'leveldb'
   }, opts)
 
-  var metrics = new prometheus()
+  var metrics = new prometheus(opts)
 
   db.put = put.bind(null, db)
   db.get = get.bind(null, db)
