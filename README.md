@@ -14,7 +14,7 @@ level('./db', function(err, db) {
   
   metrics(db)
 
-  db.metrics.createServer()
+  db.metrics.createServer().listen()
   
   setInterval(function() {
     db.put('one', 'two', function() {

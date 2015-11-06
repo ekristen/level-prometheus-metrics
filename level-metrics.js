@@ -129,42 +129,42 @@ function LevelMetrics(db, opts) {
     batch: db.batch.bind(db),
     close: db.close.bind(db),
     metrics: {
-      put: metrics.newCounter({
+      put: metrics.createCounter({
         namespace: opts.namespace,
         name: "level_puts_total",
         help: "The number of puts to the database"
       }),
-      putTime: metrics.newHistogram({
+      putTime: metrics.createHistogram({
         namespace: opts.namespace,
         name: "level_put_duration_milliseonds",
         help: "The duration of puts to the database"
       }),
-      get: metrics.newCounter({
+      get: metrics.createCounter({
         namespace: opts.namespace,
         name: "level_gets_total",
         help: "The number of gets to the database"
       }),
-      getTime: metrics.newHistogram({
+      getTime: metrics.createHistogram({
         namespace: opts.namespace,
         name: "level_get_duration_milliseonds",
         help: "The duration of gets to the database"
       }),
-      del: metrics.newCounter({
+      del: metrics.createCounter({
         namespace: opts.namespace,
         name: "level_dels_total",
         help: "The number of dels to the database"
       }),
-      delTime: metrics.newHistogram({
+      delTime: metrics.createHistogram({
         namespace: opts.namespace,
         name: "level_del_duration_milliseonds",
         help: "The duration of dels to the database"
       }),
-      batch: metrics.newCounter({
+      batch: metrics.createCounter({
         namespace: opts.namespace,
         name: "level_batches_total",
         help: "The number of batches to the database"
       }),
-      batchTime: metrics.newHistogram({
+      batchTime: metrics.createHistogram({
         namespace: opts.namespace,
         name: "level_batch_duration_milliseonds",
         help: "The duration of batches to the database"
