@@ -1,6 +1,6 @@
 {
   "name": "level-prometheus-metrics",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Instruments a LevelDB Instance with Prometheus Compatible Metrics Collection",
   "main": "level-metrics.js",
   "author": "Erik Kristensen <erik@erikkristensen.com>",
@@ -11,7 +11,7 @@
     "level-sublevel": "^6.5.2"
   },
   "dependencies": {
-    "prometheus-client-js": "^2.3.0",
+    "prometheus-client-js": "^2.3.1",
     "xtend": "^4.0.0"
   }
 }
