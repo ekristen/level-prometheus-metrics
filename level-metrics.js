@@ -116,10 +116,6 @@ function LevelMetrics(db, opts) {
 
   var metrics = new prometheus(opts)
 
-  db.put = put.bind(null, db)
-  db.get = get.bind(null, db)
-  db.del = del.bind(null, db)
-  db.batch = batch.bind(null, db)
   db.metrics = metrics
 
   db._metrics = {
@@ -171,6 +167,11 @@ function LevelMetrics(db, opts) {
       }),
     }
   }
+
+  db.put = put.bind(null, db)
+  db.get = get.bind(null, db)
+  db.del = del.bind(null, db)
+  db.batch = batch.bind(null, db)
 
   return db
 }
