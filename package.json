@@ -1,6 +1,6 @@
 {
   "name": "level-prometheus-metrics",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "Instruments a LevelDB Instance with Prometheus Compatible Metrics Collection",
   "main": "level-metrics.js",
   "author": "Erik Kristensen <erik@erikkristensen.com>",

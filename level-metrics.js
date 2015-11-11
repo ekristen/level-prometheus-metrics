@@ -97,6 +97,14 @@ function batch(db, arr, options, callback) {
       labels.status = err.status
     }
 
+    arr.map(function(op) {
+      if (op.type == 'put') {
+        db._metrics.metrics.put.increment(labels, 1)
+      } else if (op.type == 'del') {
+        db._metrics.metrics.del.increment(labels, 1)
+      }
+    })
+
     db._metrics.metrics.batch.increment(labels, 1)
     db._metrics.metrics.batchTime.observe( (endTime[1]/1000000) )
     callback.apply(db, arguments)
