@@ -102,7 +102,7 @@ function batch(db, arr, options, callback) {
     callback.apply(db, arguments)
   }
 
-  db._metrics.batch.call(db, arr, options, callback)
+  db._metrics.batch.call(db, arr, options, callback2)
 }
 
 function LevelMetrics(db, opts) {
